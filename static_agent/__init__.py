@@ -87,7 +87,7 @@ class StaticAgent(murano_object.MuranoObject):
         msg = messaging.Message()
         msg.body = template
         msg.id = msg_id
-        msg.body['_ReplyTo'] = self._responce_queue
+        msg.body['ReplyTo'] = self._responce_queue
         return msg
 
     def _send(self, template, wait_results, timeout, _context):
